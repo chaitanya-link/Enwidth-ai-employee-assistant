@@ -1,0 +1,31 @@
+﻿Company FAQs
+
+Q: What are the standard working hours?
+A: Standard working hours are 9:30 AM to 6:30 PM, Monday to Friday, with a 1-hour lunch break.
+
+Q: How do I reset my company email password?
+A: Passwords can be reset through the IT self-service portal. If you are locked out, contact the IT helpdesk at ithelp@company.com or extension 4040.
+
+Q: Who do I contact for payroll issues?
+A: Payroll issues, including salary discrepancies or tax queries, should be reported to the HR team via the internal HR ticketing system under the 'Payroll' category.
+
+Q: How does the referral bonus program work?
+A: Employees who refer a candidate that is successfully hired and completes 3 months of employment are eligible for a referral bonus, ranging from INR 10,000 to INR 50,000 depending on the role level.
+
+Q: When are performance reviews conducted?
+A: Performance reviews are conducted twice a year, in April and October, followed by compensation review cycles where applicable.
+
+Q: What is the dress code?
+A: The company follows a smart-casual dress code on regular days, with formal attire expected during client meetings or important presentations.
+
+Q: How do I raise an IT equipment request?
+A: New equipment requests (laptop, monitor, headset, etc.) can be raised through the IT asset portal and require manager approval.
+
+Q: What is the process for resignation and notice period?
+A: Employees must submit a formal resignation through the HR portal. The standard notice period is 60 days for most roles, and 30 days for employees with less than 1 year of service.
+
+Q: Is parking available at the office?
+A: Limited parking is available on a first-come basis for two-wheelers and four-wheelers. Reserved parking is not guaranteed for regular employees.
+
+Q: How do I submit an expense claim unrelated to travel?
+A: Non-travel expense claims (e.g., client entertainment, office supplies) can be submitted through the Finance portal with receipts attached, and are typically processed within 7 working days.
