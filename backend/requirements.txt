@@ -8,3 +8,4 @@ langchain-chroma
 chromadb
 python-dotenv
 pydantic
+langchain-text-splitters
