@@ -23,17 +23,23 @@ function App() {
         />
 
         <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-          <header style={{ padding: "28px 28px 0" }}>
-            <h1
+          <header
+            style={{
+              padding: "20px 28px 0",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <span
               style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "22px",
-                fontWeight: 600,
-                margin: 0,
+                fontFamily: "var(--font-mono)",
+                fontSize: "13px",
+                color: "var(--color-text-muted)",
               }}
             >
-              Enwidth <span style={{ color: "var(--color-text-muted)" }}>· Employee Assistant</span>
-            </h1>
+              Enwidth · Employee Assistant
+            </span>
           </header>
 
           <ChatWindow employeeId={employeeId} onToolUsed={handleToolUsed} />
