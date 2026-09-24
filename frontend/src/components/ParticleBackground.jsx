@@ -18,11 +18,11 @@ export default function ParticleBackground() {
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
-    const NODE_COLOR = "30, 41, 71";      // deep navy, low opacity
-    const GLOW_COLOR = "61, 90, 153";     // steel-blue accent
-    const LINE_COLOR = "30, 41, 71";      // deep navy, very faint
+    const NODE_COLOR = "30, 30, 32";      // graphite, very low opacity
+    const GLOW_COLOR = "42, 42, 46";      // graphite accent
+    const LINE_COLOR = "30, 30, 32";      // graphite, extremely faint
 
-    const NODE_COUNT = Math.floor((width * height) / 24000);
+    const NODE_COUNT = Math.floor((width * height) / 40000); // fewer nodes, calmer feel
     const CONNECT_DISTANCE = 130;
     const CURSOR_RADIUS = 200;
 

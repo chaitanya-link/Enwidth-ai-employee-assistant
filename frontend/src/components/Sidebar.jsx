@@ -1,9 +1,4 @@
-const EMPLOYEES = [
-  { id: "EMP001", name: "Rahul", department: "Engineering" },
-  { id: "EMP002", name: "Priya", department: "HR" },
-  { id: "EMP003", name: "Sneha", department: "Finance" },
-];
-
+import { EMPLOYEES } from "../constants";
 export default function Sidebar({ selectedEmployee, onSelectEmployee, toolLog }) {
   return (
     <aside
