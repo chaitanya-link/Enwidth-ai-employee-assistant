@@ -1,12 +1,8 @@
-import os
 import time
-from dotenv import load_dotenv
 from langchain.agents import create_agent
-from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.memory import MemorySaver
+from llm_router import get_working_llm
 from tools import ALL_TOOLS
-
-load_dotenv()
 
 SYSTEM_PROMPT = """You are an internal Employee AI Assistant for the company.
 
@@ -33,19 +29,10 @@ Rules:
 # NOTE: this resets when the server restarts — documented as a known limitation.
 _checkpointer = MemorySaver()
 
-# Build the agent ONCE at import time, so all requests share the same
-# checkpointer and memory persists across calls within the app's lifetime.
-#
-# TEMPORARY: using OpenAI here because Gemini's free-tier daily quota (20
-# requests/day) was exhausted during testing. We will switch back to Gemini
-# as the primary model in Part 5, where we build proper Gemini -> Gemini ->
-# OpenAI fallback logic. This is a live demonstration of exactly the problem
-# that fallback logic is designed to solve.
-_llm = ChatOpenAI(
-    model="gpt-4o-mini",
-    api_key=os.getenv("OPENAI_API_KEY"),
-    temperature=0.2
-)
+# get_working_llm() automatically tries multiple Gemini API keys in order,
+# so if one key's free-tier daily quota is exhausted, it falls back to the
+# next one. See llm_router.py for the rotation logic.
+_llm = get_working_llm()
 
 _agent = create_agent(
     model=_llm,
