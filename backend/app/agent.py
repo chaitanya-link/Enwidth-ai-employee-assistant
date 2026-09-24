@@ -28,18 +28,27 @@ Rules:
 # Checkpointer stores conversation history in memory (per thread_id).
 # NOTE: this resets when the server restarts — documented as a known limitation.
 _checkpointer = MemorySaver()
+_agent = None  # built lazily, only when first needed
 
-# get_working_llm() automatically tries multiple Gemini API keys in order,
-# so if one key's free-tier daily quota is exhausted, it falls back to the
-# next one. See llm_router.py for the rotation logic.
-_llm = get_working_llm()
 
-_agent = create_agent(
-    model=_llm,
-    tools=ALL_TOOLS,
-    system_prompt=SYSTEM_PROMPT,
-    checkpointer=_checkpointer
-)
+def get_agent():
+    """
+    Builds the agent only on first use (lazy loading), instead of when
+    this file is imported. This way, the FastAPI server can start up
+    successfully even if the LLM provider is temporarily unavailable —
+    it will only fail when someone actually sends a chat message, not
+    when the server boots.
+    """
+    global _agent
+    if _agent is None:
+        llm = get_working_llm()
+        _agent = create_agent(
+            model=llm,
+            tools=ALL_TOOLS,
+            system_prompt=SYSTEM_PROMPT,
+            checkpointer=_checkpointer
+        )
+    return _agent
 
 
 def extract_text(content):
@@ -73,7 +82,8 @@ def run_agent(user_message, employee_id=None):
 
     config = {"configurable": {"thread_id": thread_id}}
 
-    result = _agent.invoke(
+    agent = get_agent()
+    result = agent.invoke(
         {"messages": [{"role": "user", "content": content}]},
         config=config
     )
