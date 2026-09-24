@@ -18,9 +18,9 @@ export default function ParticleBackground() {
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
-    const NODE_COLOR = "237, 234, 246";   // soft off-white lavender
-    const GLOW_COLOR = "201, 166, 255";   // signature violet accent
-    const LINE_COLOR = "201, 166, 255";   // violet, very faint
+    const NODE_COLOR = "30, 41, 71";      // deep navy, low opacity
+    const GLOW_COLOR = "61, 90, 153";     // steel-blue accent
+    const LINE_COLOR = "30, 41, 71";      // deep navy, very faint
 
     const NODE_COUNT = Math.floor((width * height) / 24000);
     const CONNECT_DISTANCE = 130;

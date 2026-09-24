@@ -1,13 +1,14 @@
 :root {
-  --color-bg: #1C1832;
-  --color-bg-deep: #241D3D;
-  --color-panel: rgba(255, 255, 255, 0.06);
-  --color-panel-border: rgba(255, 255, 255, 0.10);
-  --color-accent: #C9A6FF;
-  --color-accent-soft: rgba(201, 166, 255, 0.18);
-  --color-gold: #F6C177;
-  --color-text: #EDEAF6;
-  --color-text-muted: #9A93B3;
+  --color-bg: #C3D2EA;
+  --color-bg-deep: #AFC2E0;
+  --color-panel: rgba(255, 255, 255, 0.55);
+  --color-panel-solid: #F4F7FC;
+  --color-panel-border: rgba(30, 41, 71, 0.10);
+  --color-accent: #3D5A99;
+  --color-accent-soft: rgba(61, 90, 153, 0.12);
+  --color-gold: #B98A3E;
+  --color-text: #1E2947;
+  --color-text-muted: #5C6B8A;
 
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
@@ -25,7 +26,7 @@ html, body, #root {
 }
 
 body {
-  background: radial-gradient(ellipse at top, var(--color-bg-deep) 0%, var(--color-bg) 70%);
+  background: radial-gradient(ellipse at top, var(--color-bg) 0%, var(--color-bg-deep) 100%);
   color: var(--color-text);
   font-family: var(--font-body);
   overflow: hidden;
@@ -40,7 +41,7 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(30, 41, 71, 0.15);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-track {
