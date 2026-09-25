@@ -15,14 +15,14 @@ function App() {
     <div style={{ position: "relative", height: "100vh", display: "flex" }}>
       <ParticleBackground />
 
-      <div style={{ position: "relative", zIndex: 1, display: "flex", width: "100%" }}>
+      <div style={{ position: "relative", zIndex: 1, display: "flex", width: "100%", height: "100%", minHeight: 0 }}>
         <Sidebar
           selectedEmployee={employeeId}
           onSelectEmployee={setEmployeeId}
           toolLog={toolLog}
         />
 
-        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", minHeight: 0 }}>
           <header
             style={{
               padding: "20px 28px 0",

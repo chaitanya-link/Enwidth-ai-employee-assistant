@@ -110,6 +110,7 @@ export default function ChatWindow({ employeeId, onToolUsed }) {
           alignItems: "center",
           justifyContent: "center",
           padding: "0 28px",
+          minHeight: 0,
         }}
       >
         <h1
@@ -140,9 +141,10 @@ export default function ChatWindow({ employeeId, onToolUsed }) {
         width: "100%",
         margin: "0 auto",
         padding: "0 28px 28px",
+        minHeight: 0,
       }}
     >
-      <div style={{ flex: 1, overflowY: "auto", padding: "28px 0" }}>
+      <div style={{ flex: 1, overflowY: "auto", padding: "28px 0", minHeight: 0 }}>
         {messages.map((msg, i) => (
           <MessageBubble key={i} role={msg.role} content={msg.content} toolsUsed={msg.toolsUsed} />
         ))}
