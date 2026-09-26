@@ -13,7 +13,7 @@ A RAG + Agentic Employee Assistant built for the Enwidth Technology AI Engineeri
 | Backend | Python, FastAPI |
 | AI Orchestration | LangChain (`create_agent`), LangGraph (`MemorySaver`) |
 | Vector Database | ChromaDB (persisted locally) |
-| LLM | Google Gemini (`gemini-2.5-flash`) |
+| LLM | Google Gemini (`gemini-3.5-flash`) |
 | Embeddings | Google Gemini (`gemini-embedding-001`) |
 | Containerization | Docker, Docker Compose |
 
